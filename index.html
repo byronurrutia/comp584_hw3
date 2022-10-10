@@ -142,6 +142,21 @@
           margin-left: 90px !important;
         }
       }
+
+      @keyframes textTransition {
+        from {
+          opacity: 0%;
+        }
+        to {
+          opacity: 100%;
+        }
+      }
+      .fade1 {
+        animation: 3s 1 textTransition;
+      }
+      .fade2 {
+        animation: 5s 1 textTransition;
+      }
     </style>
   </head>
   <body id="body" style="margin: 0 !important; padding: 0 !important">
@@ -167,8 +182,8 @@
 
               <tr class="blackBackround">
                 <td>
-                  <h1 style="margin: 10px">iPhone 14 Pro</h1>
-                  <h2 style="margin: 10px">Pro. Beyond.</h2>
+                  <h1 class="fade1" style="margin: 10px">iPhone 14 Pro</h1>
+                  <h2 class="fade2" style="margin: 10px">Pro. Beyond.</h2>
                 </td>
               </tr>
 
