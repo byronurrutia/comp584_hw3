@@ -123,6 +123,12 @@
         font-weight: 500;
       }
 
+      #slide1:checked ~ .slide1,
+      #slide2:checked ~ .slide2,
+      #slide3:checked ~ .slide3 {
+        display: block !important;
+      }
+
       /* Responsive styles */
       @media screen and (max-width: 600px) {
         .mobile {
@@ -137,11 +143,19 @@
           margin: 40px !important;
         }
         .fullBlock {
-          display: block !important;
+          /* display: block !important; */
           width: 100% !important;
           margin-left: 90px !important;
         }
+        .showButton {
+          display: inline-block !important;
+        }
+        .slide {
+          display: none !important;
+        }
       }
+
+      /* animation keyframes */
 
       @keyframes textTransition {
         from {
@@ -151,6 +165,8 @@
           opacity: 100%;
         }
       }
+
+      /* animation classes */
       .fade1 {
         animation: 3s 1 textTransition;
       }
@@ -346,6 +362,33 @@
 
               <tr>
                 <td>
+                  <input
+                    type="radio"
+                    name="slides"
+                    id="slide1"
+                    checked
+                    style="display: none"
+                    class="showButton"
+                  />
+                  <input
+                    type="radio"
+                    name="slides"
+                    id="slide2"
+                    style="display: none"
+                    class="showButton"
+                  />
+                  <input
+                    type="radio"
+                    name="slides"
+                    id="slide3"
+                    style="display: none"
+                    class="showButton"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>
                   <table
                     align="left"
                     border="0"
@@ -353,7 +396,7 @@
                     cellspacing="0"
                     role="presentation"
                     width="33%"
-                    class="fullBlock"
+                    class="fullBlock slide slide1"
                   >
                     <tr>
                       <td style="line-height: 24px; padding: 20px">
@@ -451,7 +494,7 @@
                     cellspacing="0"
                     role="presentation"
                     width="33%"
-                    class="fullBlock"
+                    class="fullBlock slide slide2"
                   >
                     <tr>
                       <td style="line-height: 24px; padding: 20px">
@@ -535,7 +578,7 @@
                     cellspacing="0"
                     role="presentation"
                     width="33%"
-                    class="fullBlock"
+                    class="fullBlock slide slide3"
                   >
                     <tr>
                       <td style="line-height: 24px; padding: 20px">
