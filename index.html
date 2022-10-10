@@ -85,23 +85,48 @@
         max-width: 600px;
         border-spacing: 0;
         font-family: sans-serif;
-        color: #ffffff;
       }
       .centeredText {
         text-align: center;
       }
       .blackBackround {
         background-color: #000000;
+        color: #ffffff;
       }
-      .heroSection a {
+      .heroSection a,
+      .bodySection1 a {
         text-decoration: none;
         color: #2997ff;
       }
-      .heroSection a:hover {
+      .heroSection a:hover,
+      .bodySection1 a:hover {
         text-decoration: underline;
       }
 
+      .bodySection1 p,
+      .bodySection1 h4 {
+        color: #333333;
+        margin: 20px 80px 20px;
+      }
+
+      .bodySection1 p {
+        font-size: 14px;
+      }
+
       /* Responsive styles */
+      @media screen and (max-width: 600px) {
+        .mobile {
+          width: 100% !important;
+        }
+        .block {
+          display: block !important;
+          width: 48% !important;
+        }
+        .textBlock {
+          display: block !important;
+          margin: 40px !important;
+        }
+      }
     </style>
   </head>
   <body id="body" style="margin: 0 !important; padding: 0 !important">
@@ -140,7 +165,6 @@
                     border="0"
                     cellpadding="0"
                     cellspacing="0"
-                    class="block"
                     role="presentation"
                     width="48%"
                   >
@@ -162,7 +186,6 @@
                     border="0"
                     cellpadding="0"
                     cellspacing="0"
-                    class="block"
                     role="presentation"
                     width="48%"
                   >
@@ -193,7 +216,92 @@
           </td>
         </tr>
 
-        <!-- Body copy -->
+        <!-- Body Section 1 -->
+
+        <tr class="bodySection1">
+          <td>
+            <table class="centeredText" width="100%">
+              <tr>
+                <td>
+                  <h1>What's in the Box</h1>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table
+                    align="left"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    width="100%"
+                    class="block"
+                  >
+                    <tr>
+                      <td style="padding: 20px; line-height: 24px">
+                        <img
+                          width="260px"
+                          src="https://cdn.glitch.global/90c8fcd7-ea69-435c-8bac-a1a0076be84e/iphonebox.png?v=1665430873364"
+                          alt="iphone-box"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- right collumn -->
+                  <table
+                    align="right"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    width="100%"
+                    class="block"
+                  >
+                    <tr>
+                      <td style="line-height: 24px; padding: 20px">
+                        <p
+                          class="textBlock"
+                          style="display: inline; margin: 0px 20px 0px"
+                        >
+                          iPhone 14 Pro
+                        </p>
+                        <p
+                          class="textBlock"
+                          style="display: inline; margin: 0px 20px 0px"
+                        >
+                          USB-C to Lightning Cable
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Our environmental goals.</h4>
+                  <p>
+                    As part of our efforts to reach
+                    <a href="https://www.apple.com/environment/" target="_blank"
+                      >carbon neutrality by 2030</a
+                    >
+                    , iPhone 14 Pro and iPhone 14 Pro Max do not include a power
+                    adapter or EarPods. Included in the box is a USB‑C to
+                    Lightning Cable that supports fast charging and is
+                    compatible with USB‑C power adapters and computer ports.
+                  </p>
+                  <p>
+                    We encourage you to re‑use your current USB‑A to Lightning
+                    cables, power adapters, and headphones, which are compatible
+                    with these iPhone models. But if you need any new Apple
+                    power adapters or headphones, they are available for
+                    purchase.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
 
         <!-- Button -->
 
