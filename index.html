@@ -112,7 +112,7 @@
       }
 
       .bodySection1 p,
-      .bodySection2 p {
+      .bodySection3 p {
         font-size: 12px;
       }
 
@@ -123,10 +123,23 @@
         font-weight: 500;
       }
 
+      .slide {
+        display: none;
+      }
+
       #slide1:checked ~ .slide1,
       #slide2:checked ~ .slide2,
-      #slide3:checked ~ .slide3 {
+      #slide3:checked ~ .slide3,
+      #slide4:checked ~ .slide4 {
         display: block !important;
+      }
+
+      .bodySection2 input {
+        transition: all 0.2s ease;
+      }
+      .bodySection2 input:hover {
+        box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
       }
 
       /* Responsive styles */
@@ -145,13 +158,6 @@
         .fullBlock {
           /* display: block !important; */
           width: 100% !important;
-          margin-left: 90px !important;
-        }
-        .showButton {
-          display: inline-block !important;
-        }
-        .slide {
-          display: none !important;
         }
       }
 
@@ -349,14 +355,17 @@
           </td>
         </tr>
 
-        <!-- body section 2 -->
+        <!-- Body Section2 -->
 
         <tr class="bodySection2">
           <td>
             <table class="centeredText" width="100%">
               <tr>
                 <td>
-                  <h4>Which iPhone is Right for you?</h4>
+                  <h4 style="display: inline">Finish.</h4>
+                  <h4 style="display: inline; color: #5c5b57">
+                    Pick your favorite.
+                  </h4>
                 </td>
               </tr>
 
@@ -366,24 +375,74 @@
                     type="radio"
                     name="slides"
                     id="slide1"
+                    style="accent-color: #5c5b57"
                     checked
-                    style="display: none"
-                    class="showButton"
                   />
                   <input
                     type="radio"
                     name="slides"
                     id="slide2"
-                    style="display: none"
-                    class="showButton"
+                    style="accent-color: #f9e5c9"
                   />
                   <input
                     type="radio"
                     name="slides"
                     id="slide3"
-                    style="display: none"
-                    class="showButton"
+                    style="accent-color: #f5f5f0"
                   />
+                  <input
+                    type="radio"
+                    name="slides"
+                    id="slide4"
+                    style="accent-color: #570861"
+                  />
+
+                  <div class="slide slide1" style="padding: 20px">
+                    <img
+                      src="https://cdn.glitch.global/90c8fcd7-ea69-435c-8bac-a1a0076be84e/iphone-14-pro-storage-select-202209-6-1inch-spaceblack.jfif?v=1665448449095"
+                      alt="graphite-iphone"
+                      width="100%"
+                    />
+                    <h5 style="margin-top: -55px">Color - Space Black</h5>
+                  </div>
+                  <div class="slide slide2" style="padding: 20px">
+                    <img
+                      src="https://cdn.glitch.global/90c8fcd7-ea69-435c-8bac-a1a0076be84e/iphone-14-pro-finish-select-202209-6-1inch-gold.jfif?v=1665448449397"
+                      alt="gold-iphone"
+                      width="100%"
+                    />
+                    <h5 style="margin-top: -55px">Color - Gold</h5>
+                  </div>
+                  <div class="slide slide3" style="padding: 20px">
+                    <img
+                      src="https://cdn.glitch.global/90c8fcd7-ea69-435c-8bac-a1a0076be84e/iphone-14-pro-finish-select-202209-6-1inch-silver.jfif?v=1665448449485"
+                      alt="silver-iphone"
+                      width="100%"
+                    />
+                    <h5 style="margin-top: -55px">Color - Silver</h5>
+                  </div>
+                  <div class="slide slide4" style="padding: 20px">
+                    <img
+                      src="https://cdn.glitch.global/90c8fcd7-ea69-435c-8bac-a1a0076be84e/iphone-14-pro-finish-select-202209-6-1inch-deeppurple.jfif?v=1665448448997"
+                      alt="deep-purple-iphone"
+                      width="100%"
+                    />
+                    <h5 style="margin-top: -55px">Color - Deep Purple</h5>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- body section 3 -->
+
+        <tr class="bodySection3">
+          <td>
+            <table class="centeredText" width="100%">
+              <tr>
+                <td>
+                  <h4>Which iPhone is Right for you?</h4>
                 </td>
               </tr>
 
@@ -396,7 +455,7 @@
                     cellspacing="0"
                     role="presentation"
                     width="33%"
-                    class="fullBlock slide slide1"
+                    class="fullBlock"
                   >
                     <tr>
                       <td style="line-height: 24px; padding: 20px">
@@ -494,7 +553,7 @@
                     cellspacing="0"
                     role="presentation"
                     width="33%"
-                    class="fullBlock slide slide2"
+                    class="fullBlock"
                   >
                     <tr>
                       <td style="line-height: 24px; padding: 20px">
@@ -578,7 +637,7 @@
                     cellspacing="0"
                     role="presentation"
                     width="33%"
-                    class="fullBlock slide slide3"
+                    class="fullBlock"
                   >
                     <tr>
                       <td style="line-height: 24px; padding: 20px">
